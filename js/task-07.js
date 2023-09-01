@@ -12,4 +12,4 @@ function fontChange() {
 
   inputText.style.fontSize = value + "px";
 }
-const dupa = inputSlide.addEventListener("input", fontChange);
+inputSlide.addEventListener("input", fontChange);

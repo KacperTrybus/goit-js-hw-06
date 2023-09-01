@@ -15,8 +15,8 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
 images.forEach((image) => {
-  const dod = `<img src="${image.url}" alt="Inserted Image">`;
+  const add = `<img src="${image.url}" alt="Inserted Image">`;
   const liElemCreate = document.createElement("li");
   gallery.insertAdjacentElement("afterbegin", liElemCreate); //dod li do galerii
-  liElemCreate.insertAdjacentHTML("afterbegin", dod); // dod do li zdjecia
+  liElemCreate.insertAdjacentHTML("afterbegin", add); // dod do li zdjecia
 });

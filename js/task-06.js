@@ -1,7 +1,5 @@
 const input = document.getElementById("validation-input"); //biore input
 
-const dL = input.getAttribute("data-length"); //biore moj length na valid
-
 input.addEventListener("blur", checkIfValid);
 
 function checkIfValid() {
