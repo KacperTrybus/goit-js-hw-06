@@ -6,17 +6,15 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
+const ingredientsList = document.querySelector("#ingredients"); //ul
+const ingredientsArray = [];
 
 ingredients.forEach((listItem) => {
-  document.querySelector("li"); //elemy listy
-
   const liElemCreate = document.createElement("li"); // tworzenie li
-
-  const ingredientsList = document.querySelector("#ingredients"); //ul
-
-  console.log((liElemCreate.textContent = listItem));
-
   liElemCreate.classList.add("item"); //dodanie klasy do tworzenia li
 
-  ingredientsList.appendChild(liElemCreate); // append do doma
+  liElemCreate.textContent = listItem; // ustawienie textu nowego li jako elemu listy
+  ingredientsArray.push(liElemCreate);
 });
+
+ingredientsList.append(...ingredientsArray); // append do doma
