@@ -14,9 +14,25 @@ const images = [
 ];
 const gallery = document.querySelector(".gallery");
 
-images.forEach((image) => {
+const galleryItemString = images
+  .map((image) => `<li><img src="${image.url}"></li>`) // stringi z ele do html niepolaczone
+
+  .join(""); //polaczone
+
+gallery.innerHTML = galleryItemString; //dodanie str do html
+
+/*
+ const add = `<img src="${image.url}" alt="Inserted Image">`;
+
+ const liElemCreate = document.createElement("li");
+
+ liElemCreate.insertAdjacentHTML("afterbegin", add); // dod zdj do li
+
+ Old:
+ images.forEach((image) => {
   const add = `<img src="${image.url}" alt="Inserted Image">`;
   const liElemCreate = document.createElement("li");
   gallery.insertAdjacentElement("afterbegin", liElemCreate); //dod li do galerii
   liElemCreate.insertAdjacentHTML("afterbegin", add); // dod do li zdjecia
-});
+}); 
+*/
